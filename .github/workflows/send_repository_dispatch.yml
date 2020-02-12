@@ -8,5 +8,5 @@ jobs:
   send_repository_dispatch_event:
     runs-on: ubuntu-latest
     steps:
-      - run: |-
+      - run:  |-
           curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" -H "Accept: application/vnd.github.everest-preview+json" -d "{\"event_type\": \"build request\", \"client_payload\": {\"ref\": \"${GITHUB_REF}\"}" -i https://api.github.com/repos/hilohiro/GHA-repository_dispatch/dispatches
