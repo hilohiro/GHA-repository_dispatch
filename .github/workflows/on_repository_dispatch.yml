@@ -1,8 +1,12 @@
 ---
 name: on_repository_dispatch
-on: repository_dispatch
+on:
+  repository_dispatch:
+    types: ['build request']
+  push:
+    branches: [master]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo $GITHUB_REF $GITHUB_EVENT_PATH
+      - run: echo $GITHUB_REF $GITHUB_EVENT_NAME $GITHUB_EVENT_PATH
