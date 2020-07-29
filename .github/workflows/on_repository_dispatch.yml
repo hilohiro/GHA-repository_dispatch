@@ -13,4 +13,4 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "$GITHUB_REF" "$GITHUB_EVENT_NAME" "$GITHUB_EVENT_PATH" "${{ github.event.inputs.param1 }}"
+      - run: echo \"$GITHUB_REF\" \"$GITHUB_EVENT_NAME\" \"$GITHUB_EVENT_PATH\" \"${{ github.event.inputs.param1 }}\"
