@@ -9,6 +9,7 @@ on:
     inputs:
       param1:
         description: Sample parameter
+        default: Sample Value
 jobs:
   build:
     runs-on: ubuntu-latest
